@@ -1,0 +1,14 @@
+<div>
+<h2>Result 🎲</h2>
+
+<% if @included %>
+  <% if @english_word %>
+    <p>✅ <strong>Mazel Tov !</strong> <%= @word %> is valid !</p>
+  <% else %>
+    <p>❌ Sorry but <strong><%= @word %></strong> doesnt exist...</p>
+  <% end %>
+  <% else %>
+    <p>❌ Sorry but <strong><%= @word %></strong> can't be built out of <%=@letters%>.</p>
+  <% end %>
+<p><%= link_to "Play again", new_path %> 👈</p>
+</div>
